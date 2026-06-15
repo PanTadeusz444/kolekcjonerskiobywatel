@@ -1,17 +1,16 @@
 document.querySelector(".go").addEventListener('click', () => {
-    var firstname = document.querySelector(".firstname");
-    var surname = document.querySelector(".surname");
-    var image = document.querySelector(".image");
-    var borndate = document.querySelector(".borndate");
-    var pesel = document.querySelector(".pesel");
+    const firstname = document.querySelector(".firstname").value;
+    const surname   = document.querySelector(".surname").value;
+    const image     = document.querySelector(".image").value;
+    const borndate  = document.querySelector(".borndate").value;
+    const pesel     = document.querySelector(".pesel").value;
 
-    var params = new URLSearchParams();
+    const params = new URLSearchParams();
+    params.set("firstname", firstname);
+    params.set("surname", surname);
+    params.set("image", image);
+    params.set("borndate", borndate);
+    params.set("pesel", pesel);
 
-    params.set("firstname", firstname.value);
-    params.set("surname", surname.value);
-    params.set("image", image.value);
-    params.set("borndate", borndate.value);
-    params.set("pesel", pesel.value);
-
-    location.href = "./id.html?" + params.toString();
+    window.location.href = "id.html?" + params.toString();
 });
