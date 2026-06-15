@@ -17,5 +17,5 @@ document.querySelector(".go").addEventListener('click', () => {
     params.set("borndate", borndate.value);
     params.set("pesel", pesel.value);
 
-    location.href = "/yObywatel/id?" + params;
+    location.href = "id.html?" + params.toString();
 });
