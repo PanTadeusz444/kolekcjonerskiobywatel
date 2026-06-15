@@ -90,7 +90,7 @@
 
 
             // Handle button click to pass parameters via URL
-            document.querySelector(".go").addEventListener('click', () => {
+                document.querySelector(".go").addEventListener('click', () => {
                 const firstname = document.querySelector(".firstname").value;
                 const surname = document.querySelector(".surname").value;
                 const borndate = document.querySelector(".borndate").value;
@@ -102,7 +102,8 @@
                 params.set("borndate", borndate);
                 params.set("pesel", pesel);
 
-                location.href = "/yObywatel/id?" + params.toString();
+                // Poprawiona ścieżka
+                location.href = "id.html?" + params.toString();
             });
         });
     </script>
